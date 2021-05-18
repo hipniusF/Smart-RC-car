@@ -1,0 +1,3 @@
+numpy==1.19.5
+opencv_python==4.5.2.52
+PyYAML==5.4.1
