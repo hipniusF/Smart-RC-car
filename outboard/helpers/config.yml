@@ -1,0 +1,6 @@
+onboard:
+  address: "localhost"
+  port: 5000
+  video:
+    port: 5005
+
