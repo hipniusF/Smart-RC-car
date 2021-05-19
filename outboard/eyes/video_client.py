@@ -14,9 +14,9 @@ class VideoClient(Client):
             if len(data) < 921600:
                 data += new_data
 
-            if len(new_data) >= 921600:
-                frame = np.frombuffer(data, dtype=np.uint8)
+            if len(data) >= 921600:
+                frame = np.frombuffer(data[:921600], dtype=np.uint8)
                 frame = frame.reshape(480, 640, 3)
 
-                data = b''
+                data = data[921600:]
                 yield frame
